@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Compras</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="menu-captura">Captura de artículo</a></li>
+                <li><a href="#" id="menu-compra">Compra de artículos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="captura" class="hidden">
+            <h2>Captura de artículos</h2>
+            <form id="form-captura">
+                <label for="nombre">Nombre del artículo:</label>
+                <input type="text" id="nombre" required><br>
+                <label for="descripcion">Descripción del artículo:</label>
+                <textarea id="descripcion" required></textarea><br>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required><br>
+                <label for="cantidad">Cantidad en existencia:</label>
+                <input type="number" id="cantidad" required><br>
+                <label for="foto">Fotografía del artículo:</label>
+                <input type="file" id="foto" accept="image/*" required><br>
+                <button type="submit">Guardar artículo</button>
+            </form>
+        </section>
+        <section id="compra" class="hidden">
+            <h2>Compra de artículos</h2>
+            <input type="text" id="buscar" placeholder="Buscar artículo...">
+            <div id="resultados"></div>
+            <button id="ver-carrito">Carrito de compra</button>
+        </section>
+        <section id="carrito" class="hidden">
+            <h2>Artículos en el carrito</h2>
+            <div id="lista-carrito"></div>
+            <p>Total: <span id="total-compra">0</span></p>
+            <button id="eliminar-carrito">Eliminar carrito</button>
+            <button id="seguir-comprando">Seguir comprando</button>
+        </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
